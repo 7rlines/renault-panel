@@ -18,7 +18,7 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
     // массив возможных моделей
     const availableModelNames: Array<string> = ['kaptur', 'koleos', 'logan', 'sandero', 'sandero-stepway', 'duster', 'dokker'];
     // найденное имя модели
-    let modelFoundOnPage = 'kaptur';
+    let modelFoundOnPage = 'koleos';
     // получить случайно число в периоде от заданных
     const getRandomInt = (min: number, max: number) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -53,13 +53,13 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
     let button_init: boolean = false;
     let app_init: boolean = false;
     // Повесить обработчик после загрузки DOM
-    document.addEventListener('DOMContentLoaded', () => renaultButton());
+    document.addEventListener('DOMContentLoaded', () => init());
     // Контейнер для стилей
     const $style = <HTMLStyleElement>create('style');
     // Встраиваем контейнер в head
     document.head.appendChild($style);
     // Идентификаторы индексаторов
-    var Ga_id = 'UA-75083026-5';
+    var Ga_id = 'UA-117670791-1';
     var Ya_id = '48519794';
     //id used for site we are indexing
     const platformId: string = 'zr';
@@ -94,16 +94,6 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
         } else {
             return false;
         }
-    };
-    const loadScript = (url: string = null, loadHandler: any) => {
-        if (!url) {return false; }
-        let scriptDom = <HTMLElement>document.createElement('script');
-        scriptDom.setAttribute('async','');
-        scriptDom.type = 'text/javascript';
-        scriptDom.onload = loadHandler;
-        scriptDom.src = url;
-        document.body.appendChild(scriptDom);
-        return scriptDom;
     };
 function renaultButton() {
 
@@ -153,6 +143,7 @@ function renaultButton() {
                 }
                 if (document.location.host.indexOf('avtovzglyad') >= 0) {
                     this.$button.classList.add(`avtovzglyad-mobile`);
+                    this.$button.classList.add(`platform-avg`);
                 }
                 if (document.location.host.indexOf('m.zr.ru') >=0) {
                     this.$button.classList.add(`${root}-mobile-button`);
@@ -347,6 +338,9 @@ function renaultButton() {
                         -ms-user-select: none; /* Internet Explorer/Edge */
                         user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
                     }
+                    .${root}-button.platform-avg {
+                            font-size: 28px;
+                        }
                     @media(max-width:1000px) {
                         .${root}-fluid {
                             z-index: 5000;
@@ -359,26 +353,26 @@ function renaultButton() {
                             font-size: 20px;
                         }
                     }
-                   @media(max-width:1024px) {
+                    @media(max-width:1024px) {
                        .platform-rbc.${root}-fluid {
                            top: 300px;
                        }
-                   }
-                   @media(min-width:1024px) {
+                    }
+                    @media(min-width:1024px) {
                        .platform-rbc.${root}-fluid {
                            top: 550px;
                        }
-                   }
-                   @media(max-height:650px) and (min-width:1024px) {
+                    }
+                    @media(max-height:650px) and (min-width:1024px) {
                        .platform-rbc.${root}-fluid {
                            top: 86vh; 
                        }
-                   }
-                   @media(max-height:360px) {
+                    }
+                    @media(max-height:360px) {
                        .platform-rbc.${root}-fluid {
                            top: 170px;
                        }
-                   }
+                    }
                     @media(min-width:1000px) {
                         .${root}-fluid {
                             z-index: 5000;
@@ -420,10 +414,8 @@ function renaultButton() {
                             bottom: 2.5vw;
                         }
                     }
-                    @media (max-width: 767px) {
-                        .${root}-button.${root}-image.platform-avg {
-                            bottom: 5vw;
-                        }
+                    .${root}-button.${root}-image.platform-avg {
+                         bottom: 22px;    
                     }
                     .${root}-button.${root}-image.${root}-image-zr {
                         position: absolute;
@@ -930,36 +922,21 @@ function renaultButton() {
                 sendEventToAnalytics(type, 'configurator');
                 sendEventToAnalytics(modelFoundOnPage + '-' + type, 'configurator');
             };
-
-            let ShowroomPush = () => {
-                RenaultShowroom.push('embed', {
-                    vitrine: modelFoundOnPage,
-                    container: `${root}-container`,
-                    ready: (showroom) => self.$showroom = showroom,
-
-                    stat: (type) => {
-                        statsChangeHandler(type);
-                        console.log('showroom stat:', type, self.$showroom)
-                    }
-                });
-            };
-
-            if (document.location.host.indexOf('hwdmedia') >= 0) {
-                console.log('ok we are on hwdmedia -> modelFoundOnPage',modelFoundOnPage);
-                if (modelFoundOnPage == 'koleos') {
-                    console.log('Koleos');
-                    RenaultShowroom.push("token","e536ed9d2a721c7a76d569c523ce6de3e2f930c263580870438cb6bb813e4895.external-vitrine");
-                    loadScript('https://renault-showroom.slava.digital/vitrines/static/js/embed.js', ShowroomPush());
-
+            RenaultShowroom.push('embed', {
+                source: platformId,
+                vitrine: modelFoundOnPage,
+                container: `${root}-container`,
+                ready: (showroom) => self.$showroom = showroom,
+                /*stat: (type) => ga('send', 'event', {
+                    eventCategory: 'configurator',
+                    eventAction: type,
+                    eventLabel: location.pathname
+                })*/
+                stat: (type) => {
+                    statsChangeHandler(type);
                 }
-                if (modelFoundOnPage == 'kaptur') {
-                    console.log('Kaptur');
-                    RenaultShowroom.push("token","078f7c77634636f292d633e93e20934cd04c3ae901ba83f821b65e3dcd739f65.external-vitrine");
-                    loadScript('https://renault-showroom.slava.digital/vitrines/static/js/embed.js', ShowroomPush());
+            });
 
-                }
-            }
-            
             // Элемент "фоновая подложка"
             function $background(): HTMLElement {
                 const $bg = create(`${root}-back`);
@@ -1127,7 +1104,7 @@ function renaultButton() {
                     right: 1%;
                     top: 1%;
                     z-index:4; 
-                    height: 33px;
+                    height: 34px;
                     line-height: 33px;
                     width: 33px;
                     text-align: center; 
@@ -1416,8 +1393,8 @@ function renaultAnalyticsPrepare(){
         };
         window.ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
         window.ga.l=+new Date(); // google analytics
-        loadScript('https://www.google-analytics.com/analytics.js',loadHandler);
-        //loadScript('https://www.google-analytics.com/analytics_debug.js',loadHandler);
+        //loadScript('https://www.google-analytics.com/analytics.js',loadHandler);
+        loadScript('https://www.google-analytics.com/analytics_debug.js',loadHandler);
     } else {
         window.ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
         window.ga.l=+new Date(); // google analytics

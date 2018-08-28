@@ -1,8 +1,6 @@
 (function () {
     var loadScript = function (url, loadHandler) {
-        if (url === void 0) {
-            url = null;
-        }
+        if (url === void 0) { url = null; }
         if (!url) {
             return false;
         }
@@ -15,12 +13,13 @@
         return scriptDom;
     };
     if (!window.renaultButton) {
-        loadScript('../script.js?ver=0.28');
+        loadScript('https://renault.7rlines.com/script.js?ver=4.1.17');
     }
     if (!window.RenaultShowroom || typeof (window.RenaultShowroom) == 'undefined') {
         window.RenaultShowroom = window.RenaultShowroom || []; // renault-showroom
         //window['Lx_model'] = 'duster'; // renault-showroom model
         //supported params: kaptur, koleos, logan, sandero, sandero-stepway, duster, megane
-        loadScript('https://renault-showroom.slava.digital/vitrines/static/js/embed.js');
+        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js');
     }
 })();
+//# sourceMappingURL=loader.js.map
