@@ -14,7 +14,7 @@
     // селектор статьи
     var articleContainerSelector = '.description, #content, article, .main-article, .main-article.hreview, textpage, .page, .main';
     // массив возможных моделей
-    var availableModelNames = ['kaptur', 'koleos', 'logan', 'sandero', 'sandero-stepway', 'duster', 'dokker'];
+    var availableModelNames = ['kaptur', 'koleos', 'logan', 'sandero-stepway', 'sandero', 'duster', 'dokker'];
     // найденное имя модели
     var modelFoundOnPage = 'koleos';
     // получить случайно число в периоде от заданных
@@ -63,8 +63,6 @@
     var platformId = 'zr';
     // Универсальная рассылка событий индексаторам
     var sendEventToAnalytics = function (eAction, category) {
-        if (eAction === void 0) { eAction = null; }
-        if (category === void 0) { category = null; }
         if (!eAction || typeof (eAction) == "undefined") {
             return false;
         }
@@ -118,7 +116,7 @@
             // Создание нового всплывающего окна
             var popup = new Popup;
             // Класс описания кнопки инициализации
-            var Button = (function () {
+            var Button = /** @class */ (function () {
                 function Button($root, type) {
                     this.$root = $root;
                     this.type = type;
@@ -257,6 +255,7 @@
                         fluidButtonAligner.style.setProperty('display', '');
                         fluidButtonArrow.style.setProperty('right', '');
                         if (isMobile() && $article_button.classList.contains(root + "-fluid") && !((document.location.host.indexOf('zr')) >= 0)) {
+                            // fluidButtonArrowDecor.classList.add(`${root}-rotate180`);
                         }
                         else {
                             fluidButtonArrowDecor.classList.remove(root + "-rotate180");
@@ -453,7 +452,7 @@
                         else {
                             return (rect.top >= 0 &&
                                 rect.left >= 0 &&
-                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
                                 rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */);
                         }
                     }
@@ -604,7 +603,7 @@
             }
         }
         // Класс описания компонента (Всплывающие окно)
-        var Popup = (function () {
+        var Popup = /** @class */ (function () {
             function Popup() {
                 this.$root = create(root + "-popup");
                 this.$container = create(root + "-container");
@@ -732,7 +731,7 @@
                     return $close;
                 }
                 var $buttons = create('div'), $accept = create('button'), $decline = create('button'), $image = create('img'), text = "\u0412\u044B \u0445\u043E\u0442\u0438\u0442\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C \u043A\u043E\u043D\u0444\u0438\u0433\u0443\u0440\u0430\u0446\u0438\u044E \u0434\u043B\u044F " + capitalize(modelFoundOnPage) + " ?";
-                $image.src = (path + "imgs/models/") + modelFoundOnPage + ".jpg";
+                $image.src = path + "imgs/models/" + modelFoundOnPage + ".jpg";
                 self.$confirm.appendChild($image);
                 self.$confirm.classList.add(root + "-hide");
                 $buttons.classList.add(root + "-buttons");
@@ -978,4 +977,3 @@
     }
     renaultAnalyticsPrepare();
 })();
-//# sourceMappingURL=script.js.map
