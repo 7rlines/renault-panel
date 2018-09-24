@@ -16,7 +16,7 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
     // селектор статьи
     const articleContainerSelector: string = '.description, #content, article, .main-article, .main-article.hreview, textpage, .page, .main';
     // массив возможных моделей
-    const availableModelNames: Array<string> = ['kaptur', 'koleos', 'logan', 'sandero-stepway', 'sandero', 'duster', 'dokker'];
+    const availableModelNames: Array<string> = ['kaptur', 'koleos', 'logan', 'stepway', 'sandero', 'duster', 'dokker'];
     // найденное имя модели
     let modelFoundOnPage = 'koleos';
     // получить случайно число в периоде от заданных
@@ -904,11 +904,17 @@ function renaultButton() {
                             }
                             if (modelName.includes(modelNme, 0)) {
                                 modelFoundOnPage = modelNme;
+                                if (modelFoundOnPage === 'stepway') {
+                                    modelFoundOnPage = 'sandero-stepway';
+                                }
                                 break;
                             }
                         } else {
                             if (modelName.includes(modelNme)) {
                                 modelFoundOnPage = modelNme;
+                                if (modelFoundOnPage === 'stepway') {
+                                    modelFoundOnPage = 'sandero-stepway';
+                                }
                                 break;
                             }
                         }

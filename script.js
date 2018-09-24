@@ -14,7 +14,7 @@
     // селектор статьи
     var articleContainerSelector = '.description, #content, article, .main-article, .main-article.hreview, textpage, .page, .main';
     // массив возможных моделей
-    var availableModelNames = ['kaptur', 'koleos', 'logan', 'sandero-stepway', 'sandero', 'duster', 'dokker'];
+    var availableModelNames = ['kaptur', 'koleos', 'logan', 'stepway', 'sandero', 'duster', 'dokker'];
     // найденное имя модели
     var modelFoundOnPage = 'koleos';
     // получить случайно число в периоде от заданных
@@ -660,12 +660,18 @@
                                 }
                                 if (modelName.includes(modelNme, 0)) {
                                     modelFoundOnPage = modelNme;
+                                    if (modelFoundOnPage === 'stepway') {
+                                        modelFoundOnPage = 'sandero-stepway';
+                                    }
                                     break;
                                 }
                             }
                             else {
                                 if (modelName.includes(modelNme)) {
                                     modelFoundOnPage = modelNme;
+                                    if (modelFoundOnPage === 'stepway') {
+                                        modelFoundOnPage = 'sandero-stepway';
+                                    }
                                     break;
                                 }
                             }
