@@ -987,6 +987,9 @@ function renaultButton() {
                 $decline = <HTMLButtonElement>create('button'),
                 $image = <HTMLImageElement>create('img'),
                 text = `Вы хотите открыть конфигурацию для ${capitalize(modelFoundOnPage)} ?`;
+                if (modelFoundOnPage === 'sandero-stepway') {
+                    text = `Вы хотите открыть конфигурацию для Sandero Stepway ?`;
+                }
 
             $image.src = `${path}imgs/models/` + modelFoundOnPage + `.jpg`;
             self.$confirm.appendChild($image);
