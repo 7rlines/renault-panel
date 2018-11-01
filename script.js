@@ -96,6 +96,19 @@
             return false;
         }
     };
+    var loadScript = function (url, loadHandler) {
+        if (url === void 0) { url = null; }
+        if (!url) {
+            return false;
+        }
+        var scriptDom = document.createElement('script');
+        scriptDom.setAttribute('async', '');
+        scriptDom.type = 'text/javascript';
+        scriptDom.onload = loadHandler;
+        scriptDom.src = url;
+        document.body.appendChild(scriptDom);
+        return scriptDom;
+    };
     function renaultButton() {
         // Обработчик для кнопки "Добавить товар"
         function init() {
@@ -685,20 +698,59 @@
                     sendEventToAnalytics(type, 'configurator');
                     sendEventToAnalytics(modelFoundOnPage + '-' + type, 'configurator');
                 };
-                RenaultShowroom.push('embed', {
-                    source: platformId,
-                    vitrine: modelFoundOnPage,
-                    container: root + "-container",
-                    ready: function (showroom) { return self.$showroom = showroom; },
-                    /*stat: (type) => ga('send', 'event', {
-                        eventCategory: 'configurator',
-                        eventAction: type,
-                        eventLabel: location.pathname
-                    })*/
-                    stat: function (type) {
-                        statsChangeHandler(type);
+                if ((document.location.pathname.indexOf('material1') >= 0) ||
+                    (document.location.pathname.indexOf('material2') >= 0) ||
+                    (document.location.pathname.indexOf('material3') >= 0) ||
+                    (document.location.pathname.indexOf('material4') >= 0) ||
+                    (document.location.pathname.indexOf('material5') >= 0)) {
+                    var ShowroomPush = function () {
+                        RenaultShowroom.push('embed', {
+                            vitrine: modelFoundOnPage,
+                            container: root + "-container",
+                            ready: function (showroom) { return self.$showroom = showroom; },
+                            stat: function (type) {
+                                statsChangeHandler(type);
+                                console.log('showroom stat:', type, self.$showroom);
+                            }
+                        });
+                    };
+                    if (document.location.pathname.indexOf('material1') >= 0) {
+                        RenaultShowroom.push("token", "457a8e7c7c6096be469209adf901b16ac76dd1349a8dc7154fe2221b098d3091.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
-                });
+                    if (document.location.pathname.indexOf('material2') >= 0) {
+                        RenaultShowroom.push("token", "cbbe3143cfae9faafae9267953f4e58ff472b16566276af38ddd91c36eb478ac.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('material3') >= 0) {
+                        RenaultShowroom.push("token", "79d0dcfc04737a6c2f76d4f8a309fe6a8836418cbb7d5aa2c6d6c449dfc7207a.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('material4') >= 0) {
+                        RenaultShowroom.push("token", "246bf28138a594b20b5dc51525fb4312b46c22beac0f8df48859aabe8a4b9bef.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('material5') >= 0) {
+                        RenaultShowroom.push("token", "fdfda9f521c519b38b7b7f8bb31ec46ef134f1dbf1aaca646098e8352ffc67ff.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                }
+                else {
+                    RenaultShowroom.push('embed', {
+                        source: platformId,
+                        vitrine: modelFoundOnPage,
+                        container: root + "-container",
+                        ready: function (showroom) { return self.$showroom = showroom; },
+                        /*stat: (type) => ga('send', 'event', {
+                            eventCategory: 'configurator',
+                            eventAction: type,
+                            eventLabel: location.pathname
+                        })*/
+                        stat: function (type) {
+                            statsChangeHandler(type);
+                        }
+                    });
+                }
                 // Элемент "фоновая подложка"
                 function $background() {
                     var $bg = create(root + "-back");
@@ -902,7 +954,7 @@
                 }
             };
             Popup.prototype.disableScroll = function () {
-                if (window.addEventListener) {
+                if (window.addEventListener) { // older FF
                     window.addEventListener('DOMMouseScroll', this.preventDefault, false);
                 }
                 window.onwheel = this.preventDefault; // modern standard
