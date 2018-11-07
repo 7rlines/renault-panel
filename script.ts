@@ -1703,8 +1703,8 @@ function renaultAnalyticsPrepare(){
         };
         window.ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
         window.ga.l=+new Date(); // google analytics
-        //loadScript('https://www.google-analytics.com/analytics.js',loadHandler);
-        loadScript('https://www.google-analytics.com/analytics_debug.js',loadHandler);
+        loadScript('https://www.google-analytics.com/analytics.js',loadHandler);
+        //loadScript('https://www.google-analytics.com/analytics_debug.js',loadHandler);
     } else {
         window.ga = window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
         window.ga.l=+new Date(); // google analytics
