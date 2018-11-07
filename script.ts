@@ -8,7 +8,7 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
     // Положение кнопки для открытия конфигурация
     let button_state: TButtonState = 'top';
     // Базовая ссылка на ресурсы
-    const path: string = 'http://renault.7rlines.com/';
+    const path: string = 'https://renault.7rlines.com/';
     // селектор контейнера с картинкой в котором должна появиться кнопка
     const victimSelector: string = '.article_image, .bigNodeImage, .topArticlesListImage, .image-micro-schema, .main-article-figure, .video-player, .article-image';
     // селектор элемента из которого можно получить название модели

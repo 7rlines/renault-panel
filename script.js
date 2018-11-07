@@ -6,7 +6,7 @@
     // Положение кнопки для открытия конфигурация
     var button_state = 'top';
     // Базовая ссылка на ресурсы
-    var path = 'http://renault.7rlines.com/';
+    var path = 'https://renault.7rlines.com/';
     // селектор контейнера с картинкой в котором должна появиться кнопка
     var victimSelector = '.article_image, .bigNodeImage, .topArticlesListImage, .image-micro-schema, .main-article-figure, .video-player, .article-image';
     // селектор элемента из которого можно получить название модели
