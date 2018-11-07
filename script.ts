@@ -1206,7 +1206,7 @@ function renaultButton() {
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
                 if (document.location.pathname.indexOf('913456-renault') >=0) {
-                    RenaultShowroom.push("token","45c0263434874bed4f971834792efd5a9da42dfd5147def33260e541f5119cc9.external-vitrine");
+                    RenaultShowroom.push("token","7e58cb3706255b270c0beab9bef088a2e1f2a6b16e43e3460ac1fdc8cd442e5f.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
                 if (document.location.pathname.indexOf('913446-obnovlenny') >=0) {
