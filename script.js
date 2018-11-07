@@ -702,7 +702,56 @@
                     (document.location.pathname.indexOf('material2') >= 0) ||
                     (document.location.pathname.indexOf('material3') >= 0) ||
                     (document.location.pathname.indexOf('material4') >= 0) ||
-                    (document.location.pathname.indexOf('material5') >= 0)) {
+                    (document.location.pathname.indexOf('material5') >= 0) ||
+                    (document.location.pathname.indexOf('renault-naraschivaet-v-rossii-obemy-prodazh') >= 0) ||
+                    (document.location.pathname.indexOf('dvoe-iz-lartsa-v-rossii-startovali') >= 0) ||
+                    (document.location.pathname.indexOf('novoj-spetsversii-renault-kaptur') >= 0) ||
+                    (document.location.pathname.indexOf('kaptur-play-ne-zaputatsja-v-seti') >= 0) ||
+                    (document.location.pathname.indexOf('906902-v-rossii') >= 0) ||
+                    (document.location.pathname.indexOf('905685-novyj') >= 0) ||
+                    (document.location.pathname.indexOf('908402-renault') >= 0) ||
+                    (document.location.pathname.indexOf('907258-novyj') >= 0) ||
+                    (document.location.pathname.indexOf('909409-lichnoe') >= 0) ||
+                    (document.location.pathname.indexOf('906808-otsenki') >= 0) ||
+                    (document.location.pathname.indexOf('905857-renault') >= 0) ||
+                    (document.location.pathname.indexOf('905678-malomernyj') >= 0) ||
+                    (document.location.pathname.indexOf('905260-zimnie') >= 0) ||
+                    (document.location.pathname.indexOf('905154-clio') >= 0) ||
+                    (document.location.pathname.indexOf('905000-pojmali') >= 0) ||
+                    (document.location.pathname.indexOf('909785-kak') >= 0) ||
+                    (document.location.pathname.indexOf('908333-ehkstremalnyj') >= 0) ||
+                    (document.location.pathname.indexOf('910246-v-sakhare') >= 0) ||
+                    (document.location.pathname.indexOf('908923-stavim') >= 0) ||
+                    (document.location.pathname.indexOf('908268-novyj') >= 0) ||
+                    (document.location.pathname.indexOf('908117-rassekrechen') >= 0) ||
+                    (document.location.pathname.indexOf('907184-renault') >= 0) ||
+                    (document.location.pathname.indexOf('907120-renault') >= 0) ||
+                    (document.location.pathname.indexOf('905219-dakar') >= 0) ||
+                    (document.location.pathname.indexOf('904989-novyj') >= 0) ||
+                    (document.location.pathname.indexOf('908063-rassekrechen') >= 0) ||
+                    (document.location.pathname.indexOf('909769-renault') >= 0) ||
+                    (document.location.pathname.indexOf('909898-dva') >= 0) ||
+                    (document.location.pathname.indexOf('909209-dolgozhdannyj') >= 0) ||
+                    (document.location.pathname.indexOf('907239-dozhdalis') >= 0) ||
+                    (document.location.pathname.indexOf('908747-vybiraem') >= 0) ||
+                    (document.location.pathname.indexOf('908054-renault') >= 0) ||
+                    (document.location.pathname.indexOf('905098-simvol') >= 0) ||
+                    (document.location.pathname.indexOf('906626-v-nem') >= 0) ||
+                    (document.location.pathname.indexOf('911699-renault') >= 0) ||
+                    (document.location.pathname.indexOf('912222-renault') >= 0) ||
+                    (document.location.pathname.indexOf('912127-obnovlennaya') >= 0) ||
+                    (document.location.pathname.indexOf('912291-magazin') >= 0) ||
+                    (document.location.pathname.indexOf('912442-krossover') >= 0) ||
+                    (document.location.pathname.indexOf('912584-renault') >= 0) ||
+                    (document.location.pathname.indexOf('912640-renault') >= 0) ||
+                    (document.location.pathname.indexOf('912542-sekretnye') >= 0) ||
+                    (document.location.pathname.indexOf('913113-renault') >= 0) ||
+                    (document.location.pathname.indexOf('913228-kross') >= 0) ||
+                    (document.location.pathname.indexOf('913456-renault') >= 0) ||
+                    (document.location.pathname.indexOf('913446-obnovlenny') >= 0) ||
+                    (document.location.pathname.indexOf('913809-renault') >= 0) ||
+                    (document.location.pathname.indexOf('913798-renault') >= 0) ||
+                    (document.location.pathname.indexOf('913970-renault') >= 0)) {
                     var ShowroomPush = function () {
                         RenaultShowroom.push('embed', {
                             vitrine: modelFoundOnPage,
@@ -714,6 +763,7 @@
                             }
                         });
                     };
+                    //rbc
                     if (document.location.pathname.indexOf('material1') >= 0) {
                         RenaultShowroom.push("token", "457a8e7c7c6096be469209adf901b16ac76dd1349a8dc7154fe2221b098d3091.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
@@ -732,6 +782,204 @@
                     }
                     if (document.location.pathname.indexOf('material5') >= 0) {
                         RenaultShowroom.push("token", "fdfda9f521c519b38b7b7f8bb31ec46ef134f1dbf1aaca646098e8352ffc67ff.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    //ag
+                    if (document.location.pathname.indexOf('renault-naraschivaet-v-rossii-obemy-prodazh') >= 0) {
+                        RenaultShowroom.push("token", "908ae3e39ffec102c6a6b4293d44355357869c40eea9b55b99ef9b680f8bc08d.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('dvoe-iz-lartsa-v-rossii-startovali') >= 0) {
+                        RenaultShowroom.push("token", "54d25cfccbe5d9cc5c06261906f7ca7dd7f7174e707fa93e89b7c29aa0337e9b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('novoj-spetsversii-renault-kaptur') >= 0) {
+                        RenaultShowroom.push("token", "b19022abd5f73e5fe1226e23b6b339505a6ddc50eef00abf11b28900598c749b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('kaptur-play-ne-zaputatsja-v-seti') >= 0) {
+                        RenaultShowroom.push("token", "ab715c25a28fd3efb3750e860aebdaeef150e99a0af7acb30934964935d7febb.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    //zr
+                    if (document.location.pathname.indexOf('906902-v-rossii') >= 0) {
+                        RenaultShowroom.push("token", "19e227736377c4799b0dc15fc9b09655364ed18b557f2e8fd613ec519474b634.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905685-novyj') >= 0) {
+                        RenaultShowroom.push("token", "95bfdf98bf6196051c4b295a89d853482df6b16de1558e075c9d0338b425728d.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908402-renault') >= 0) {
+                        RenaultShowroom.push("token", "864f2e48bd0dd397ab07f7fbb022f4af0b844f156e7a0c04ff6a2d949049ded6.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('907258-novyj') >= 0) {
+                        RenaultShowroom.push("token", "dd33d2095fefbab82758fc5112bd80bf11a880304dfd651258e7cf0c1bbf1156.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('909409-lichnoe') >= 0) {
+                        RenaultShowroom.push("token", "27754979f3254a85ea7f7ce8b68b6b47195bd0bb1be875cf36c8ba0530e9eb45.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('906808-otsenki') >= 0) {
+                        RenaultShowroom.push("token", "596122790158fa3da2037573276da6f8d6025ded6e2e2d58284afd8430ba8f2c.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905857-renault') >= 0) {
+                        RenaultShowroom.push("token", "ef0f4ba9212984006cfced57c9380ee51689c3842582857c352bb1a0b3ed3a1b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905678-malomernyj') >= 0) {
+                        RenaultShowroom.push("token", "c73bc1f4d08c2d587cf1a86193785bf7e844e40bee9abe4978a02357cb467250.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905260-zimnie') >= 0) {
+                        RenaultShowroom.push("token", "8e058755a67bec9eb4f6f79a2f0caf2686280c3bbd61dcca427c8988f294daa9.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905154-clio') >= 0) {
+                        RenaultShowroom.push("token", "a45943fa2cd086105317ec0ef74245ec1320794b41871c2f9cfc054ccef8d693.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905000-pojmali') >= 0) {
+                        RenaultShowroom.push("token", "ac66b014d4fb253c68d545546375b965fd18ab48e9475a0d093c815806549a0f.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('909785-kak') >= 0) {
+                        RenaultShowroom.push("token", "71bf84892759e8772ccd0ca39cf500abfa45e0cf614a045ad304ed930f74e601.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908333-ehkstremalnyj') >= 0) {
+                        RenaultShowroom.push("token", "1a944937324612c85f2533829a38ce9921171808765d26a411421db0d7e19187.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('910246-v-sakhare') >= 0) {
+                        RenaultShowroom.push("token", "a6102a77bdf4a4da577f6d4305c4fafa84300f413ba89d2890319b7dade33b98.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908923-stavim') >= 0) {
+                        RenaultShowroom.push("token", "dcdcd3fd1c62764d64d0b4c4539ec9adc9864503a437ead0eb1bfcab9e47b5e9.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908268-novyj') >= 0) {
+                        RenaultShowroom.push("token", "0f54f0c21eaca1b994fb5d65a7e0a78653e524181d8d18c9035a0e7dec900e01.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908117-rassekrechen') >= 0) {
+                        RenaultShowroom.push("token", "2b5a5a52ce8d0d9c888433ebc0ae8fc103179952a6dc847912a316588f96dc90.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('907184-renault') >= 0) {
+                        RenaultShowroom.push("token", "5bd40920e0e274d7f43c2158b603743fa32565e93d81e3ca8aafb78d0188e14f.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('907120-renault') >= 0) {
+                        RenaultShowroom.push("token", "96002540b72fcab508cbe58f50fd99581b89f89911a21a456f79c0fb6d0afd4a.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905219-dakar') >= 0) {
+                        RenaultShowroom.push("token", "a280c8e330c865fe5cda234f838bee102fb5076f863a0b18f7582a608316f9cb.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('904989-novyj') >= 0) {
+                        RenaultShowroom.push("token", "4cf846ea0dd5fad5d4e1c8203fa641e37fb125e2f10fd920a70191eff75a62cc.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908063-rassekrechen') >= 0) {
+                        RenaultShowroom.push("token", "487009c043f7b6e23a675ff61604af5d3fc5ab4767044c22ff2be34ec3e14a3b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('909769-renault') >= 0) {
+                        RenaultShowroom.push("token", "dc93837ba68d53fa56830d6256949ead98500607a861daaf57273958602bbb26.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('909898-dva') >= 0) {
+                        RenaultShowroom.push("token", "31aaa4e23da9a0776a2820667c71d2cbc63a2169600b0682a2636eeebe26f494.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('909209-dolgozhdannyj') >= 0) {
+                        RenaultShowroom.push("token", "c5bf7e734c29dbecc5241705d7a540b2344c2f7bd362aaf1311e96bfb5ff80ef.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('907239-dozhdalis') >= 0) {
+                        RenaultShowroom.push("token", "d73a473ee6fec9825b9a32f3c93fc68b4741d32ef9ecceb3e573264d225f0c77.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908747-vybiraem') >= 0) {
+                        RenaultShowroom.push("token", "cc22297d73dc341d5d2224229cd3f954b350608c5f3cb79aa98aad14796a621a.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('908054-renault') >= 0) {
+                        RenaultShowroom.push("token", "26d95275850c1b6c5efc112104a4a84159cbc3c11b7699dead464dfad67980b9.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('905098-simvol') >= 0) {
+                        RenaultShowroom.push("token", "313e552841dc8fb6cd29eaf741d225a4d53366fd73075431e8de29021ff448b0.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('906626-v-nem') >= 0) {
+                        RenaultShowroom.push("token", "a88aa4a0d6fe048449ed69d50f3ab21ce23cd8ae2d26a08ec8727df3066efc9b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('911699-renault') >= 0) {
+                        RenaultShowroom.push("token", "9e6aec1bbe3baed2e445855dbb31651d9fd01a508a3d7fba59e926c5283397a4.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912222-renault') >= 0) {
+                        RenaultShowroom.push("token", "ab09cac6c5795767e110dbb02e1217b27f4eee594e93b399c0f87c501bb50efa.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912127-obnovlennaya') >= 0) {
+                        RenaultShowroom.push("token", "55e1d8ff1359ae791962142dc08d7710b90355cae8d58047d6fbdb0cded93979.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912291-magazin') >= 0) {
+                        RenaultShowroom.push("token", "f9563d3e97a5bd1294a1405fe4daddf4ba94527f31ae159e58d5be29d4a4dcf8.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912442-krossover') >= 0) {
+                        RenaultShowroom.push("token", "f3f0bab33344e7d424aac720cbe8eade8fc1fd3093773a45c357f75c9696e307.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912584-renault') >= 0) {
+                        RenaultShowroom.push("token", "4f9648235134c5a960e1460505807a94125a7f781ade512ee38fef7d67fe9504.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912640-renault') >= 0) {
+                        RenaultShowroom.push("token", "c1eaf090131940806d46b7845d4cfeb013a45aa000ef774afbcafb4057cbfcaa.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('912542-sekretnye') >= 0) {
+                        RenaultShowroom.push("token", "f53e2516879cd9072ed65aa8f029c0905ccd0df3cece93ad9414d3476e41ed53.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913113-renault') >= 0) {
+                        RenaultShowroom.push("token", "9e7eecf6fe6d11104e0561a15be22af96afc1674fdc2d2e2bbb9270c43768b4c.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913228-kross') >= 0) {
+                        RenaultShowroom.push("token", "137b9fd81fb7a10e84b380a63f3c1bc7ee5c4dc460002f9f401f8ffc6ddebaf5.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913456-renault') >= 0) {
+                        RenaultShowroom.push("token", "45c0263434874bed4f971834792efd5a9da42dfd5147def33260e541f5119cc9.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913446-obnovlenny') >= 0) {
+                        RenaultShowroom.push("token", "df13491f5c383b1d0fc750c01dc8c59bd34640ab88737e28c3103d9f77718813.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913809-renault') >= 0) {
+                        RenaultShowroom.push("token", "607ed8c0a4b1b50267c823deeb10fc71deb7f5c8316480fcdefffdee25796ff6.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913798-renault') >= 0) {
+                        RenaultShowroom.push("token", "adccd3a2fa9ad288098b43dca21c9b99287807775349352b1f504db573726c1d.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('913970-renault') >= 0) {
+                        RenaultShowroom.push("token", "0424af6ea535ef4b9cd6db98c13307fb166c20b191cb0aa8f81dd97474e9247b.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
                 }
