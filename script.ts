@@ -1267,7 +1267,7 @@ function renaultButton() {
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
                 if (document.location.pathname.indexOf('material6') >=0) {
-                    RenaultShowroom.push("token","0000000");
+                    RenaultShowroom.push("token","6ae4b3d1488776be48002602c7fcdb13b0bf3542900244aa1f205645fed0fb32.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
 
