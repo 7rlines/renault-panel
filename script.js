@@ -751,7 +751,16 @@
                     (document.location.pathname.indexOf('913446-obnovlenny') >= 0) ||
                     (document.location.pathname.indexOf('913809-renault') >= 0) ||
                     (document.location.pathname.indexOf('913798-renault') >= 0) ||
-                    (document.location.pathname.indexOf('913970-renault') >= 0)) {
+                    (document.location.pathname.indexOf('913970-renault') >= 0) ||
+                    (document.location.pathname.indexOf('914172-pokupaem') >= 0) ||
+                    (document.location.pathname.indexOf('914308-renault-obyavila') >= 0) ||
+                    (document.location.pathname.indexOf('914498-renault-kaptur') >= 0) ||
+                    (document.location.pathname.indexOf('914387-5-prichin-kupit') >= 0) ||
+                    (document.location.pathname.indexOf('914522-renault-logan') >= 0) ||
+                    (document.location.pathname.indexOf('2018-09-12-renault-sandero') >= 0) ||
+                    (document.location.pathname.indexOf('2018-10-18-renault-kaptur') >= 0) ||
+                    (document.location.pathname.indexOf('2018-10-30-test-drajv') >= 0) ||
+                    (document.location.pathname.indexOf('material6') >= 0)) {
                     var ShowroomPush = function () {
                         RenaultShowroom.push('embed', {
                             vitrine: modelFoundOnPage,
@@ -980,6 +989,42 @@
                     }
                     if (document.location.pathname.indexOf('913970-renault') >= 0) {
                         RenaultShowroom.push("token", "0424af6ea535ef4b9cd6db98c13307fb166c20b191cb0aa8f81dd97474e9247b.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914172-pokupaem') >= 0) {
+                        RenaultShowroom.push("token", "e5c0803c3c11c64764afb2d3bb66271058074913548f15853ed790f27b5e5518.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914308-renault-obyavila') >= 0) {
+                        RenaultShowroom.push("token", "db9567ea21e371c15b1e43b77b68e0f4e3d72054ceb29a8c88f81c78c0d740ad.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914498-renault-kaptur') >= 0) {
+                        RenaultShowroom.push("token", "8bc8d96985f5ccd912fd05293da1ee213108bc4e3765ffe01cd8f4ce673543a7.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914387-5-prichin') >= 0) {
+                        RenaultShowroom.push("token", "d960c4b3fc73f3bb7a6fb0a1e4672943ef86e357423ea7ad4a0c9bd54e8981b5.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914522-renault-logan') >= 0) {
+                        RenaultShowroom.push("token", "5cb4b0702fe4189eae6c6acbeebf9af5d5a371d39e4c887fb897eed890c5c378.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('2018-09-12-renault-sandero-stepway') >= 0) {
+                        RenaultShowroom.push("token", "c3a9bab5ade162893dab78042e5ae0f1f9fff446f37f5262313a98b3644baaf8.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('2018-10-18-renault-kaptur') >= 0) {
+                        RenaultShowroom.push("token", "43b373cea4fe2deec84ceed9f88b35289d092314b83b13c565c448d290079f05.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('2018-10-30-test-drajv') >= 0) {
+                        RenaultShowroom.push("token", "8f53f70bfa2e74b1625d26a58c25b28f37817136bdd7bf6da84260dc831614df.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('material6') >= 0) {
+                        RenaultShowroom.push("token", "0000000");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
                 }
