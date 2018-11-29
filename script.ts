@@ -1001,7 +1001,8 @@ function renaultButton() {
                 (document.location.pathname.indexOf('2018-09-12-renault-sandero') >=0) ||
                 (document.location.pathname.indexOf('2018-10-18-renault-kaptur') >=0) ||
                 (document.location.pathname.indexOf('2018-10-30-test-drajv') >=0) ||
-                (document.location.pathname.indexOf('material6') >=0)
+                (document.location.pathname.indexOf('material6') >=0) ||
+                (document.location.pathname.indexOf('material7') >=0)
             ) {
                 let ShowroomPush = () => {
                     RenaultShowroom.push('embed', {
@@ -1268,6 +1269,10 @@ function renaultButton() {
                 }
                 if (document.location.pathname.indexOf('material6') >=0) {
                     RenaultShowroom.push("token","6ae4b3d1488776be48002602c7fcdb13b0bf3542900244aa1f205645fed0fb32.external-vitrine");
+                    loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                }
+                if (document.location.pathname.indexOf('material7') >=0) {
+                    RenaultShowroom.push("token","fe6fe5389020d08bda9de9ec09f5f4764fae04cfbdec5c9897ee2007577729b1.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
 
