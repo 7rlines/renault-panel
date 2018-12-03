@@ -761,7 +761,13 @@
                     (document.location.pathname.indexOf('2018-10-18-renault-kaptur') >= 0) ||
                     (document.location.pathname.indexOf('2018-10-30-test-drajv') >= 0) ||
                     (document.location.pathname.indexOf('material6') >= 0) ||
-                    (document.location.pathname.indexOf('material7') >= 0)) {
+                    (document.location.pathname.indexOf('material7') >= 0) ||
+                    (document.location.pathname.indexOf('914660-5-prichin') >= 0) ||
+                    (document.location.pathname.indexOf('914873-novoe') >= 0) ||
+                    (document.location.pathname.indexOf('914855-5-prichin-kupit') >= 0) ||
+                    (document.location.pathname.indexOf('915078-rossiyane-raskupayut') >= 0) ||
+                    (document.location.pathname.indexOf('2018-11-08-kak-poluchit-vygodnye') >= 0) ||
+                    (document.location.pathname.indexOf('2018-11-13-test-drajv-renault-kaptur-play') >= 0)) {
                     var ShowroomPush = function () {
                         RenaultShowroom.push('embed', {
                             vitrine: modelFoundOnPage,
@@ -1030,6 +1036,30 @@
                     }
                     if (document.location.pathname.indexOf('material7') >= 0) {
                         RenaultShowroom.push("token", "fe6fe5389020d08bda9de9ec09f5f4764fae04cfbdec5c9897ee2007577729b1.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914660-5-prichin') >= 0) {
+                        RenaultShowroom.push("token", "7380074b6bd96c0f4aeb22d29d854b019d30f89259b3af00d236e0e2a9a0f85d.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914873-novoe') >= 0) {
+                        RenaultShowroom.push("token", "38956e5ec8592a7549aabc4610a65d2380b6583bbaaba538e857843fede7ef56.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('914855-5-prichin-kupit') >= 0) {
+                        RenaultShowroom.push("token", "7776d8db46829329fba32b3ff6b1ed8b1326f4e372b4638274a69bc01bfe31bf.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('915078-rossiyane-raskupayut') >= 0) {
+                        RenaultShowroom.push("token", "dbb5232bc4033866dc85f01205bd327c3c80de3212fa00a42c4f007370260e9a.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('2018-11-08-kak-poluchit-vygodnye') >= 0) {
+                        RenaultShowroom.push("token", "45cf2c17b8d509d7a024abe528e161d1cf8921e66d47037f5e687a2832eb24a0.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (document.location.pathname.indexOf('2018-11-13-test-drajv-renault-kaptur-play') >= 0) {
+                        RenaultShowroom.push("token", "cfe3ab63ea3f3af8dc4c28487945aa22fb865950b0b1273cba53f8ce57ce1842.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
                 }
