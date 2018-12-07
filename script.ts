@@ -1008,7 +1008,9 @@ function renaultButton() {
                 (document.location.pathname.indexOf('914855-5-prichin-kupit') >=0) ||
                 (document.location.pathname.indexOf('915078-rossiyane-raskupayut') >=0) ||
                 (document.location.pathname.indexOf('2018-11-08-kak-poluchit-vygodnye') >=0) ||
-                (document.location.pathname.indexOf('2018-11-13-test-drajv-renault-kaptur-play') >=0)
+                (document.location.pathname.indexOf('2018-11-13-test-drajv-renault-kaptur-play') >=0) ||
+                (document.location.pathname.indexOf('915242-v-rossii-startovali') >=0) ||
+                (document.location.pathname.indexOf('915002-dan-prikaz') >=0)
             ) {
                 let ShowroomPush = () => {
                     RenaultShowroom.push('embed', {
@@ -1303,6 +1305,14 @@ function renaultButton() {
                 }
                 if (document.location.pathname.indexOf('2018-11-13-test-drajv-renault-kaptur-play') >=0) {
                     RenaultShowroom.push("token","cfe3ab63ea3f3af8dc4c28487945aa22fb865950b0b1273cba53f8ce57ce1842.external-vitrine");
+                    loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                }
+                if (document.location.pathname.indexOf('915242-v-rossii-startovali') >=0) {
+                    RenaultShowroom.push("token","236bb4507b4c1f4203260c30828584e4f1bc10ae176d185a19df529cf417fe81.external-vitrine");
+                    loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                }
+                if (document.location.pathname.indexOf('915002-dan-prikaz') >=0) {
+                    RenaultShowroom.push("token","1d81512edb0455717944994c10a289dc82f613f6bc22c08ca9e25301ad273c0e.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
 
