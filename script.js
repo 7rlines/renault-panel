@@ -635,7 +635,7 @@
                 });*/
                 this.view_init();
                 sendEventToAnalytics('load', 'application');
-                sendEventToAnalytics('Github', 'source');
+                sendEventToAnalytics('renault.7rlines.com', 'source');
                 sendEventToAnalytics(modelFoundOnPage + '-load', 'application');
                 this.style_init();
                 this.auto_open();
