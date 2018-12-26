@@ -11,6 +11,8 @@
     var victimSelector = '.article_image, .bigNodeImage, .topArticlesListImage, .image-micro-schema, .main-article-figure, .video-player, .article-image';
     // селектор элемента из которого можно получить название модели
     var getModelTextSelector = '.model-name, .model_name, .article-text, .car-tag .preview .name .transition_link, .textpage, .article__content';
+    // селектор элемента из которого можно молучить идентификатор статьи для конфигуратора
+    var getArtilceSelector = '.avg-article-id';
     // селектор статьи
     var articleContainerSelector = '.description, #content, article, .main-article, .main-article.hreview, textpage, .page, .main';
     // массив возможных моделей
@@ -699,6 +701,13 @@
                     sendEventToAnalytics(type, 'configurator');
                     sendEventToAnalytics(modelFoundOnPage + '-' + type, 'configurator');
                 };
+                var articleId = 'null';
+                if (document.location.host.indexOf('avtovzglyad') >= 0 || document.location.host.indexOf('avg') >= 0) {
+                    var sourceArticleId = find_all(getArtilceSelector);
+                    if (sourceArticleId) {
+                        articleId = (sourceArticleId[0].innerText || sourceArticleId[0].textContent).toLowerCase();
+                    }
+                }
                 if ((document.location.pathname.indexOf('material1') >= 0) ||
                     (document.location.pathname.indexOf('material2') >= 0) ||
                     (document.location.pathname.indexOf('material3') >= 0) ||
@@ -772,7 +781,8 @@
                     (document.location.pathname.indexOf('915242-v-rossii-startovali') >= 0) ||
                     (document.location.pathname.indexOf('915002-dan-prikaz') >= 0) ||
                     (document.location.pathname.indexOf('915263-renault-koleos-poluchil') >= 0) ||
-                    (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0)) {
+                    (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0) ||
+                    (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii')) {
                     var ShowroomPush = function () {
                         RenaultShowroom.push('embed', {
                             vitrine: modelFoundOnPage,
@@ -1081,6 +1091,11 @@
                     }
                     if (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0) {
                         RenaultShowroom.push("token", "10bbc60378b3012560352da97f4bc45db37f59b0f466c94b99c59ae105dc04e3.external-vitrine");
+                        loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                    }
+                    if (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii') {
+                        console.log(articleId, '+');
+                        RenaultShowroom.push("token", "222f5472736958b7a8bf81d4bdc31c10f6ff1ff4c8f75ca7b816e40c27d2d11f.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
                 }
