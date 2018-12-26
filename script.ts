@@ -1337,7 +1337,6 @@ function renaultButton() {
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
                 if (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii') {
-                    console.log(articleId, '+');
                     RenaultShowroom.push("token", "222f5472736958b7a8bf81d4bdc31c10f6ff1ff4c8f75ca7b816e40c27d2d11f.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
