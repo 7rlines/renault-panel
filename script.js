@@ -772,7 +772,7 @@
                     (document.location.pathname.indexOf('915242-v-rossii-startovali') >= 0) ||
                     (document.location.pathname.indexOf('915002-dan-prikaz') >= 0) ||
                     (document.location.pathname.indexOf('915263-renault-koleos-poluchil') >= 0) ||
-                    (document.location.pathname.indexOf('915373-santa-fe-sorento-koleos') >= 0)) {
+                    (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0)) {
                     var ShowroomPush = function () {
                         RenaultShowroom.push('embed', {
                             vitrine: modelFoundOnPage,
@@ -1079,7 +1079,7 @@
                         RenaultShowroom.push("token", "916a98c29d6398271f27109ff342b090d506abdb9aa2af4bca7e8a0f898a904f.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
-                    if (document.location.pathname.indexOf('915373-santa-fe-sorento-koleos') >= 0) {
+                    if (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0) {
                         RenaultShowroom.push("token", "10bbc60378b3012560352da97f4bc45db37f59b0f466c94b99c59ae105dc04e3.external-vitrine");
                         loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                     }
