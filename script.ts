@@ -897,6 +897,7 @@ function renaultButton() {
             }
             var isIE11 = document.body.style.msTextCombineHorizontal !== undefined;
             let sourceForModelName = find_all(getModelTextSelector);
+            console.log('source', sourceForModelName);
             if (sourceForModelName) {
                 for (var sourceName of sourceForModelName) {
                     let modelName = (sourceName.innerText || sourceName.textContent).toLowerCase();
@@ -923,7 +924,7 @@ function renaultButton() {
                                 break;
                             }
                         } else {
-                            if (modelName.includes(modelNme)) {
+                            if (modelName.includes(modelNme)) { console.log('model-name', modelNme);
                                 modelFoundOnPage = modelNme;
                                 if (modelFoundOnPage === 'stepway') {
                                     modelFoundOnPage = 'sandero-stepway';

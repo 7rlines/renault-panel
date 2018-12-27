@@ -653,6 +653,7 @@
                 }
                 var isIE11 = document.body.style.msTextCombineHorizontal !== undefined;
                 var sourceForModelName = find_all(getModelTextSelector);
+                console.log('source', sourceForModelName);
                 if (sourceForModelName) {
                     for (var _i = 0, sourceForModelName_1 = sourceForModelName; _i < sourceForModelName_1.length; _i++) {
                         var sourceName = sourceForModelName_1[_i];
@@ -684,6 +685,7 @@
                             }
                             else {
                                 if (modelName.includes(modelNme)) {
+                                    console.log('model-name', modelNme);
                                     modelFoundOnPage = modelNme;
                                     if (modelFoundOnPage === 'stepway') {
                                         modelFoundOnPage = 'sandero-stepway';
