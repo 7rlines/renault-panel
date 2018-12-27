@@ -84,9 +84,7 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
             //console.log('YA CB ♦ ',err,this);
         };
         try {
-            if (window['yaCounter' + Ya_id].reachGoal) {
-                window['yaCounter' + Ya_id].reachGoal(category + ': ' + eAction, goalParams, goalCB );
-            }
+            window['yaCounter' + Ya_id].reachGoal(category + ': ' + eAction, goalParams, goalCB );
         } catch (e) {
             console.log('Something is wrong with Yandex analytics: ', e);
         }
@@ -1025,7 +1023,8 @@ function renaultButton() {
                 (document.location.pathname.indexOf('915002-dan-prikaz') >= 0) ||
                 (document.location.pathname.indexOf('915263-renault-koleos-poluchil') >= 0) ||
                 (document.location.pathname.indexOf('915495-postgarantijnoe') >= 0) ||
-                (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii')
+                (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii') ||
+                (articleId == '2018-12-26-plodis-i-razmnozhajsja')
             ) {
                 let ShowroomPush = () => {
                     RenaultShowroom.push('embed', {
@@ -1340,6 +1339,10 @@ function renaultButton() {
                 }
                 if (articleId == '2018-12-04-vybiraem-zimnie-komplektatsii') {
                     RenaultShowroom.push("token", "222f5472736958b7a8bf81d4bdc31c10f6ff1ff4c8f75ca7b816e40c27d2d11f.external-vitrine");
+                    loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
+                }
+                if (articleId == '2018-12-26-plodis-i-razmnozhajsja') {
+                    RenaultShowroom.push("token", "c6f8acc4e145e92348ba7b31e5a7a9b119ba9863a16d5ef2160d557d0e835519.external-vitrine");
                     loadScript('https://showroom.renault.ru/vitrines/static/js/embed.js', ShowroomPush());
                 }
 
