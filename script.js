@@ -10,7 +10,7 @@
     // селектор контейнера с картинкой в котором должна появиться кнопка
     var victimSelector = '.article_image, .bigNodeImage, .topArticlesListImage, .image-micro-schema, .main-article-figure, .video-player, .article-image';
     // селектор элемента из которого можно получить название модели
-    var getModelTextSelector = '.model-name, .model_name, .article-text, .car-tag .preview .name .transition_link, .textpage, .article__content';
+    var getModelTextSelector = '.model-name, .model_name, .car-tag .preview .name .transition_link, .textpage, .article__content';
     // селектор элемента из которого можно молучить идентификатор статьи для конфигуратора
     var getArtilceSelector = '.avg-article-id';
     // селектор статьи
@@ -653,7 +653,6 @@
                 }
                 var isIE11 = document.body.style.msTextCombineHorizontal !== undefined;
                 var sourceForModelName = find_all(getModelTextSelector);
-                console.log('source', sourceForModelName);
                 if (sourceForModelName) {
                     for (var _i = 0, sourceForModelName_1 = sourceForModelName; _i < sourceForModelName_1.length; _i++) {
                         var sourceName = sourceForModelName_1[_i];
@@ -685,7 +684,6 @@
                             }
                             else {
                                 if (modelName.includes(modelNme)) {
-                                    console.log('model-name', modelNme);
                                     modelFoundOnPage = modelNme;
                                     if (modelFoundOnPage === 'stepway') {
                                         modelFoundOnPage = 'sandero-stepway';

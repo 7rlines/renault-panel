@@ -12,7 +12,7 @@ declare type TFluidButtonState = 'hide' | 'animate' | 'show';
     // селектор контейнера с картинкой в котором должна появиться кнопка
     const victimSelector: string = '.article_image, .bigNodeImage, .topArticlesListImage, .image-micro-schema, .main-article-figure, .video-player, .article-image';
     // селектор элемента из которого можно получить название модели
-    const getModelTextSelector: string = '.model-name, .model_name, .article-text, .car-tag .preview .name .transition_link, .textpage, .article__content';
+    const getModelTextSelector: string = '.model-name, .model_name, .car-tag .preview .name .transition_link, .textpage, .article__content';
     // селектор элемента из которого можно молучить идентификатор статьи для конфигуратора
     const getArtilceSelector: string = '.avg-article-id';
     // селектор статьи
@@ -897,7 +897,6 @@ function renaultButton() {
             }
             var isIE11 = document.body.style.msTextCombineHorizontal !== undefined;
             let sourceForModelName = find_all(getModelTextSelector);
-            console.log('source', sourceForModelName);
             if (sourceForModelName) {
                 for (var sourceName of sourceForModelName) {
                     let modelName = (sourceName.innerText || sourceName.textContent).toLowerCase();
@@ -924,7 +923,7 @@ function renaultButton() {
                                 break;
                             }
                         } else {
-                            if (modelName.includes(modelNme)) { console.log('model-name', modelNme);
+                            if (modelName.includes(modelNme)) {
                                 modelFoundOnPage = modelNme;
                                 if (modelFoundOnPage === 'stepway') {
                                     modelFoundOnPage = 'sandero-stepway';
